@@ -3,9 +3,8 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { useLocalSearchParams } from 'expo-router';
 import { useLayoutEffect } from 'react';
 import { StyleSheet, View, Text, useColorScheme } from 'react-native';
-
-import { ProductCard } from "@/components/ProductCard";
 import {PIZZA_DATA } from "@/constants";
+import { SUSHI_DATA } from "@/constants";
 import { ApartmentCard } from '@/components/ApartmentCard';
 import { APARTMENT_DATA } from '@/constants';
 
@@ -15,12 +14,13 @@ const ApartmentScreen = () => {
 
     const { slug } = useLocalSearchParams<{ slug: string }>();
 
-    const item = APARTMENT_DATA.find((item) => item.name === slug);
+    //const item = APARTMENT_DATA.find((item) => item.name === slug);
+    const item = SUSHI_DATA.find((item) => item.name === slug);
     const item1 = PIZZA_DATA.find((item1) => item1.title === slug);
 
     useLayoutEffect(() => {
         navigation.setOptions({
-            headerTitle: item?.name ?? 'Apartment Details',
+            headerTitle: item?.name ?? 'Sushi Details',
         });
     }, [navigation, item?.name]);
 
@@ -33,7 +33,7 @@ const ApartmentScreen = () => {
                         color: isDark ? '#fff' : '#000',
                     },
                 ]}>
-                Apartment Details
+                Sushi Details
             </Text>
             {item && <ApartmentCard {...item} />}
             {/*{item1 && <ProductCard {...item1}/>}*/}

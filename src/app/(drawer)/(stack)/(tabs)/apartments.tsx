@@ -7,10 +7,10 @@ import {
     ListRenderItem,
     useColorScheme,
 } from 'react-native';
-
 import { ApartmentCard } from '@/components';
-import { Apartment, APARTMENT_DATA } from '@/constants';
-const renderItem: ListRenderItem<Apartment> = ({ item }) => (
+import { Apartment, APARTMENT_DATA,Sushi,SUSHI_DATA} from '@/constants';
+
+const renderItem: ListRenderItem<Sushi> = ({ item }) => (
     <ApartmentCard {...item} />
 );
 
@@ -30,9 +30,10 @@ const ApartmentsScreen = () => {
         <FlatList
             ref={ref}
             ListHeaderComponent={
-                <Text style={screenTitleStyle}>Apartments Screen</Text>
+                <Text style={screenTitleStyle}>Sushi menu Screen</Text>
             }
-            data={APARTMENT_DATA}
+            //data={APARTMENT_DATA}
+            data={SUSHI_DATA}
             renderItem={renderItem}
             contentContainerStyle={styles.container}
         />

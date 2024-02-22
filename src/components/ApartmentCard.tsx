@@ -8,10 +8,9 @@ import {
     View,
     useColorScheme,
 } from 'react-native';
+import {Sushi}from '@/constants';
 
-import { Apartment } from '@/constants';
-
-const ApartmentCard: FC<Apartment> = ({ name, image, price }) => {
+const ApartmentCard: FC<Sushi> = ({ name, image, price }) => {
     const isDark = useColorScheme() === 'dark';
     const router = useRouter();
 
@@ -26,13 +25,14 @@ const ApartmentCard: FC<Apartment> = ({ name, image, price }) => {
                 { backgroundColor: isDark ? '#767676' : '#e8e8e8' },
             ]}
             onPress={handlePress}>
-            <Image source={{ uri: image }} style={styles.image} />
+            {/*<Image source={{ uri: image }} style={styles.image} />*/}
+            <Image source={ image } style={styles.image} />
             <View style={styles.footer}>
                 <Text style={[styles.name, { color: isDark ? 'white' : '#000' }]}>
                     {name}
                 </Text>
                 <Text style={[styles.price, { color: isDark ? '#8cf16d' : 'green' }]}>
-                    Price: ${price}
+                    Price: Uah{price}
                 </Text>
             </View>
         </TouchableOpacity>

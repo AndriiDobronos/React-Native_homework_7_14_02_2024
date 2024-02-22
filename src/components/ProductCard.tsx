@@ -5,7 +5,6 @@ import image from "../images/Pizza1.png";
 import trolley from "../images/trolley.png";
 import redHeart from "../images/redHeart.png";
 import {useRouter} from "expo-router";
-import {mockItemData1} from "@/constants/mockItemData";
 
 type mockProps = {
     mockItemData:{
@@ -21,7 +20,7 @@ type mockProps = {
     trolley: trolley,
     redHeart: redHeart,
     buy: string,
-    new: string,
+    nw: string,
     }
 };
 
@@ -34,10 +33,8 @@ const ProductCard = (props:mockProps) => {
     };
 
     return(
-
         <TouchableOpacity
             style={[
-
                 { backgroundColor: isDark ? '#767676' : '#e8e8e8' },
             ]}
             onPress={handlePress}>

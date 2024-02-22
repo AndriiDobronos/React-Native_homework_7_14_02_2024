@@ -6,6 +6,22 @@ import image3 from "@/images/Pizza3.png";
 import image4 from "@/images/Pizza4.png";
 import image5 from "@/images/Pizza5.png";
 import image6 from "@/images/Pizza6.png";
+import image7 from "@/images/Pizza7.png";
+import image8 from "@/images/Pizza8.png";
+import image9 from "@/images/Pizza9.png";
+import image10 from "@/images/Pizza10.png";
+import image11 from "@/images/Pizza11.png";
+import image12 from "@/images/Pizza12.png";
+import {ImageBase } from "react-native";
+import sushi1 from "@/images/sushi1.png";
+import sushi2 from "@/images/sushi2.png";
+import sushi3 from "@/images/sushi3.png";
+import sushi4 from "@/images/sushi4.png";
+import sushi5 from "@/images/sushi5.png";
+import sushi6 from "@/images/sushi6.png";
+import sushi7 from "@/images/sushi7.png";
+import sushi8 from "@/images/sushi8.png";
+import sushi9 from "@/images/sushi9.png";
 
 export interface Pizza {
     title: string,
@@ -26,6 +42,13 @@ export interface Pizza {
 export interface Apartment {
     name: string;
     image: string;
+    price: number;
+}
+
+export interface Sushi {
+    name: string;
+    //image: ImageBase;
+    image: sushi1;
     price: number;
 }
 
@@ -59,6 +82,54 @@ const APARTMENT_DATA: Apartment[] = [
         price: 900,
     },
 ];
+
+const SUSHI_DATA: Sushi[] = [
+    {
+        name: 'Sushi1',
+        image: sushi1,
+        price: 100,
+    },
+    {
+        name: 'Sushi2',
+        image: sushi2,
+        price: 110,
+    },
+    {
+        name: 'Sushi3',
+        image: sushi3,
+        price: 120,
+    },
+    {
+        name: 'Sushi4',
+        image: sushi4,
+        price: 150,
+    },
+    {
+        name: 'Sushi',
+        image: sushi5,
+        price: 105,
+    },
+    {
+        name: 'Sushi6',
+        image: sushi6,
+        price: 130,
+    },
+    {
+        name: 'Sushi7',
+        image: sushi7,
+        price: 90,
+    },
+    {
+        name: 'Sushi8',
+        image: sushi8,
+        price: 95,
+    },
+    {
+        name: 'Sushi9',
+        image: sushi9,
+        price: 85,
+    },
+]
 
 const PIZZA_DATA: Pizza[] = [
     {
@@ -160,7 +231,7 @@ const PIZZA_DATA: Pizza[] = [
         oldPrice: 'Old Price',
         description:'Long title long title long title long title',
         imageInternet: 'https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg',
-        image: image1,
+        image: image7,
         trolley: trolley,
         redHeart: redHeart,
         buy: "Buy",
@@ -175,7 +246,7 @@ const PIZZA_DATA: Pizza[] = [
         oldPrice: 'Old Price',
         description:'Long title long title long title long title',
         imageInternet: 'https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg',
-        image: image2,
+        image: image8,
         trolley: trolley,
         redHeart: redHeart,
         buy: "Buy",
@@ -190,7 +261,7 @@ const PIZZA_DATA: Pizza[] = [
         oldPrice: 'Old Price',
         description:'Long title long title long title long title',
         imageInternet: 'https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg',
-        image: image3,
+        image: image9,
         trolley: trolley,
         redHeart: redHeart,
         buy: "Buy",
@@ -205,7 +276,7 @@ const PIZZA_DATA: Pizza[] = [
         oldPrice: 'Old Price',
         description:'Long title long title long title long title',
         imageInternet: 'https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg',
-        image: image4,
+        image: image10,
         trolley: trolley,
         redHeart: redHeart,
         buy: "Buy",
@@ -220,7 +291,7 @@ const PIZZA_DATA: Pizza[] = [
         oldPrice: 'Old Price',
         description:'Long title long title long title long title',
         imageInternet: 'https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg',
-        image: image5,
+        image: image11,
         trolley: trolley,
         redHeart: redHeart,
         buy: "Buy",
@@ -235,7 +306,7 @@ const PIZZA_DATA: Pizza[] = [
         oldPrice: 'Old Price',
         description:'Long title long title long title long title',
         imageInternet: 'https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg',
-        image: image6,
+        image: image12,
         trolley: trolley,
         redHeart: redHeart,
         buy: "Buy",
@@ -245,4 +316,4 @@ const PIZZA_DATA: Pizza[] = [
 
 
 
-export { APARTMENT_DATA,PIZZA_DATA};
+export { APARTMENT_DATA,PIZZA_DATA,SUSHI_DATA};

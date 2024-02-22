@@ -1,7 +1,7 @@
 import { Text, StyleSheet, ScrollView, useColorScheme,View } from 'react-native';
 
 import { ApartmentCard } from '@/components/ApartmentCard';
-import { APARTMENT_DATA,PIZZA_DATA } from '@/constants';
+import { APARTMENT_DATA,PIZZA_DATA,SUSHI_DATA } from '@/constants';
 import {ProductCard} from "@/components/ProductCard";
 
 const ExploreScreen = () => {
@@ -19,7 +19,7 @@ const ExploreScreen = () => {
 
     return (
         <ScrollView >
-            <Text style={screenTitleStyle}>Apartments</Text>
+            <Text style={screenTitleStyle}>General menu</Text>
 
             <ProductCard  mockItemData={PIZZA_DATA[0]}/>
             <ProductCard  mockItemData={PIZZA_DATA[1]}/>
@@ -35,15 +35,20 @@ const ExploreScreen = () => {
             <ProductCard  mockItemData={PIZZA_DATA[11]}/>
 
             <View contentContainerStyle={styles.container}>
-                <Text style={sectionTitleStyle}>Apartments Near You</Text>
-                <ApartmentCard {...APARTMENT_DATA[0]} />
-                <ApartmentCard {...APARTMENT_DATA[1]} />
-                <ApartmentCard {...APARTMENT_DATA[2]} />
+                <Text style={sectionTitleStyle}>Salmon Sushi</Text>
+                <ApartmentCard {...SUSHI_DATA[0]} />
+                <ApartmentCard {...SUSHI_DATA[1]} />
+                <ApartmentCard {...SUSHI_DATA[2]} />
 
-                <Text style={sectionTitleStyle}>Most Popular Apartments</Text>
-                <ApartmentCard {...APARTMENT_DATA[3]} />
-                <ApartmentCard {...APARTMENT_DATA[4]} />
-                <ApartmentCard {...APARTMENT_DATA[0]} />
+                <Text style={sectionTitleStyle}>Most Popular Sushi</Text>
+                <ApartmentCard {...SUSHI_DATA[3]} />
+                <ApartmentCard {...SUSHI_DATA[4]} />
+                <ApartmentCard {...SUSHI_DATA[5]} />
+
+                <Text style={sectionTitleStyle}>Sushi at the best price</Text>
+                <ApartmentCard {...SUSHI_DATA[6]} />
+                <ApartmentCard {...SUSHI_DATA[7]} />
+                <ApartmentCard {...SUSHI_DATA[8]} />
             </View>
         </ScrollView>
     );

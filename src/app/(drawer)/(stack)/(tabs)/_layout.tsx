@@ -15,8 +15,8 @@ const TabsGroup = () => (
         <Tabs.Screen
             name="apartments"
             options={{
-                headerTitle: 'Apartments',
-                tabBarLabel: 'Apartments',
+                headerTitle: 'Sushi menu',
+                tabBarLabel: 'Sushi menu',
             }}
         />
         <Tabs.Screen

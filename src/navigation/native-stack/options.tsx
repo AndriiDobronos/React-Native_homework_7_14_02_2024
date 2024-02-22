@@ -10,7 +10,7 @@ export const homeStackScreenOptions: ComponentProps<
 
 export const apartmentScreenOptions: NativeStackNavigationOptions = {
     presentation: 'modal',
-    headerTitle: 'Apartment Details',
+    headerTitle: 'Sushi Details',
     headerShown: true,
 };
 

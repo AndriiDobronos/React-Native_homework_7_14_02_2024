@@ -6,6 +6,7 @@ import {
     ImageProps,
     StyleSheet,
     FlatList,
+    Animated,
     Dimensions,
     ListRenderItem,
 } from 'react-native';
@@ -36,17 +37,20 @@ const images = [
 ];
 
 const nextImages = [
-    {id:"7",image:require('../images/Pizza1.png')},
-    {id:"8",image:require('../images/Pizza2.png')},
-    {id:"9",image:require('../images/Pizza3.png')},
-    {id:"10",image:require('../images/Pizza4.png')},
-    {id:"11",image:require('../images/Pizza5.png')},
-    {id:"12",image:require('../images/Pizza6.png')},
+    {id:"7",image:require('../images/Pizza7.png')},
+    {id:"8",image:require('../images/Pizza8.png')},
+    {id:"9",image:require('../images/Pizza9.png')},
+    {id:"10",image:require('../images/Pizza10.png')},
+    {id:"11",image:require('../images/Pizza11.png')},
+    {id:"12",image:require('../images/Pizza12.png')},
 ];
+
+let numberCalls = 0;
 
 const CarouselFlatList: React.FC = () => {
 
     const [currentIndex, setCurrentIndex] = useState<IndexContextType>(0);
+    const scrollX = React.useRef(new Animated.Value(0)).current;
     const [refreshing, setRefreshing] = React.useState(false);
     const [currentData, setCurrentData] = useState(images);
 
@@ -108,16 +112,34 @@ const CarouselFlatList: React.FC = () => {
         return () => clearInterval(autoScrollTimer);
     }, [currentIndex]);
 
-    let numberCalls = 0;
     const addNewData = () => {
-        const imagesCopy = [...images];
         const nextImagesCopy = [...nextImages];
-        if(numberCalls < nextImages.length) {
-            currentData.pop();
-            currentData.push(nextImagesCopy[numberCalls]);
+        if(nextImagesCopy.length === 0) {
+            return;
         }
-        numberCalls += 1;
-    };
+        const newCurrentData = [...currentData];
+        if(numberCalls < nextImagesCopy.length) {
+            newCurrentData.push(nextImagesCopy[numberCalls])
+            numberCalls ++;
+        }
+        if ((newCurrentData.length - 1) > currentData.length) {
+            newCurrentData.shift();
+        }
+        setCurrentData(newCurrentData)
+
+        if (numberCalls === nextImagesCopy.length) {
+            numberCalls = 0;
+        }
+    }
+    // const addNewData = () => {
+    //     const imagesCopy = [...images];
+    //     const nextImagesCopy = [...nextImages];
+    //     if(numberCalls < nextImages.length) {
+    //         currentData.pop();
+    //         currentData.push(nextImagesCopy[numberCalls]);
+    //     }
+    //     numberCalls += 1;
+    // };
 
     return (
         <IndexContext.Provider value={currentIndex} >
@@ -133,7 +155,13 @@ const CarouselFlatList: React.FC = () => {
                     refreshing={refreshing}
                     showsHorizontalScrollIndicator={false}
                     onEndReached={addNewData}
-                    onScroll={(e):void =>{}}
+                    onScroll={Animated.event(
+                        [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+                        { useNativeDriver: false }
+                    )}
+                    onMomentumScrollEnd={(event) => {
+                        setCurrentIndex(Math.ceil(event.nativeEvent.contentOffset.x / width* 0.94));
+                    }}
                 />
                 {renderPagination()}
             </View>
