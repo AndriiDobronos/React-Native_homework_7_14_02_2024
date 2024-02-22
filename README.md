@@ -4,12 +4,7 @@ Examples with Drawer, Native Stack, Bottom Tabs and Typescript
 ![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/video_2024-02-22_17-13-58.mp4)
 
 
-[//]: # (![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/photo_2024-02-14_23-12-37.jpg))
-[//]: # (![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/photo_2024-02-14_23-13-52.jpg))
-[//]: # (![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/photo_2024-02-14_23-14-14.jpg))
-[//]: # (![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/photo_2024-02-14_23-14-32.jpg))
-[//]: # (![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/photo_2024-02-14_23-14-45.jpg))
-[//]: # (![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/photo_2024-02-14_23-15-40.jpg))
+
 [//]: # (Screen.Recording.2024-01-29.at.23.27.24.mov)
 Setup project
 npm install
