@@ -22,6 +22,10 @@ export const tabScreenOptions: ComponentProps<typeof Tabs>['screenOptions'] = ({
                     iconName = focused ? 'albums' : 'albums-outline';
                     break;
                 }
+                case 'sushi': {
+                    iconName = focused ? 'albums' : 'albums-outline';
+                    break;
+                }
                 case 'productCards': {
                     iconName = focused ? 'menu' : 'menu-outline';
                     break;

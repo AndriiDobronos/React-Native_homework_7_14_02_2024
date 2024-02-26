@@ -1,14 +1,12 @@
 import { Stack } from 'expo-router';
-
 import {
-    apartmentScreenOptions, searchScreenOptions,
-    homeStackScreenOptions, productScreenOptions,
+    sushiScreenOptions, homeStackScreenOptions
 } from '@/navigation/native-stack/options';
 
 const HomeStackGroup = () => (
     <Stack screenOptions={homeStackScreenOptions}>
         <Stack.Screen name="(tabs)" />
-        <Stack.Screen name="apartment/[slug]" options={apartmentScreenOptions} />
+        <Stack.Screen name="sushi/[slug]" options={sushiScreenOptions} />
     </Stack>
 );
 

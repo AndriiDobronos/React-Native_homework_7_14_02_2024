@@ -21,6 +21,7 @@ import {useAppDispatch} from "@/hooks/useAppDispatch";
 import {useFocusEffect} from "expo-router";
 import {useCallback,useEffect} from "react";
 import store from "@/store";
+import LogIn from "@/components/LogIn";
 
 const ProfileScreen = () => {
 
@@ -33,7 +34,6 @@ const ProfileScreen = () => {
     const loading = useSelector(state => state.user.loading)
     const action = useSelector(state => state.user.userF)
     const isDark = useColorScheme() === 'dark';
-
     const textStyle = { color: isDark ? '#fff' : '#000' };
     const screenTitleStyle = [styles.screenTitle, textStyle];
 
@@ -62,25 +62,14 @@ const ProfileScreen = () => {
             }
         },[refreshing])
 
-    // useFocusEffect(useCallback(()=>{
-    //         const promise = dispatch(fetchUserById(+userId))
-    //         return () => {
-    //             promise.abort()
-    //         }
-    //
-    //     },[]))
-
-    // if (loading) {
-    //     return <Text textStyle>Loading ...</Text>
-    // }
-
     return (
         <View style={styles.container}>
             <Text style={screenTitleStyle}>Profile Screen</Text>
-            <Text style={textStyle}>Name: {firstName} {lastName}</Text>
-            <Text style={textStyle}>UserId: {userId}</Text>
+            <Text style={textStyle}>Name: {firstName} {lastName} UserId: {userId}</Text>
+            {/*<Text style={textStyle}>UserId: {userId}</Text>*/}
             <TouchableOpacity>
                 <Text style={textStyle}>Edit Profile</Text>
+                <LogIn  />
                 <TextInput
                     style={styles.input}
                     value={firstName}
@@ -100,7 +89,6 @@ const ProfileScreen = () => {
             <Button
                 title={`Make a request by Id: ${userId}`}
                 style={styles.button}
-                //onPress={sendRequest}
                 onPress={onRefresh}
             />
             <Text style={textStyle}>Status: {loading}</Text>
@@ -114,16 +102,16 @@ const ProfileScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 16,
-        marginTop: 24,
+        paddingHorizontal: 26,
     },
     screenTitle: {
-        fontSize: 24,
-        marginTop: 8,
+        fontSize: 22,
+        //marginTop: 8,
         fontWeight: 'bold',
     },
     input: {
         borderWidth:1,
+        borderRadius:3,
         borderColor:'white',
         color:'white',
         marginBottom:5,

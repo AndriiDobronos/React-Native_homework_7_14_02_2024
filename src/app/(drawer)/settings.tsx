@@ -5,7 +5,6 @@ import {useAppDispatch} from "@/hooks/useAppDispatch";
 
 const SettingsScreen = () => {
 
-    //const theme = useAppSelector((state:{ui})=>state.ui.theme);
     const theme = useAppSelector(selectTheme);
 
     const dispatch = useAppDispatch()
@@ -28,20 +27,28 @@ const SettingsScreen = () => {
             <Switch  value={theme === 'dark'}
                      onValueChange={handleValueChange}
             />
+            <View style={[styles.screenView,{backgroundColor:theme === 'light' ? '#fff' : '#000'}]}></View>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        padding: 16,
-        marginTop: 24,
+        paddingVertical: 26,
+        marginTop: 44,
+        alignItems:"center",
+        backgroundColor:"lightgrey"
     },
     screenTitle: {
         fontSize: 24,
         marginTop: 8,
         fontWeight: 'bold',
     },
+    screenView: {
+        width:260,
+        height:260,
+        marginTop:20,
+    }
 });
 
 export default SettingsScreen;

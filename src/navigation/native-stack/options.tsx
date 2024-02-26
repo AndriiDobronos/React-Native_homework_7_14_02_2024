@@ -14,6 +14,12 @@ export const apartmentScreenOptions: NativeStackNavigationOptions = {
     headerShown: true,
 };
 
+export const sushiScreenOptions: NativeStackNavigationOptions = {
+    presentation: 'modal',
+    headerTitle: 'Sushi Details',
+    headerShown: true,
+};
+
 export const productScreenOptions: NativeStackNavigationOptions = {
     presentation: 'modal',
     headerTitle: 'Product Details',

@@ -1,7 +1,7 @@
 import { Text, StyleSheet, ScrollView, useColorScheme,View } from 'react-native';
 
-import { ApartmentCard } from '@/components/ApartmentCard';
-import { APARTMENT_DATA,PIZZA_DATA,SUSHI_DATA } from '@/constants';
+import { SushiCard } from '@/components/SushiCard';
+import { PIZZA_DATA,SUSHI_DATA } from '@/constants';
 import {ProductCard} from "@/components/ProductCard";
 
 const ExploreScreen = () => {
@@ -36,19 +36,19 @@ const ExploreScreen = () => {
 
             <View contentContainerStyle={styles.container}>
                 <Text style={sectionTitleStyle}>Salmon Sushi</Text>
-                <ApartmentCard {...SUSHI_DATA[0]} />
-                <ApartmentCard {...SUSHI_DATA[1]} />
-                <ApartmentCard {...SUSHI_DATA[2]} />
+                <SushiCard {...SUSHI_DATA[0]} />
+                <SushiCard {...SUSHI_DATA[1]} />
+                <SushiCard {...SUSHI_DATA[2]} />
 
                 <Text style={sectionTitleStyle}>Most Popular Sushi</Text>
-                <ApartmentCard {...SUSHI_DATA[3]} />
-                <ApartmentCard {...SUSHI_DATA[4]} />
-                <ApartmentCard {...SUSHI_DATA[5]} />
+                <SushiCard {...SUSHI_DATA[3]} />
+                <SushiCard {...SUSHI_DATA[4]} />
+                <SushiCard {...SUSHI_DATA[5]} />
 
                 <Text style={sectionTitleStyle}>Sushi at the best price</Text>
-                <ApartmentCard {...SUSHI_DATA[6]} />
-                <ApartmentCard {...SUSHI_DATA[7]} />
-                <ApartmentCard {...SUSHI_DATA[8]} />
+                <SushiCard {...SUSHI_DATA[6]} />
+                <SushiCard {...SUSHI_DATA[7]} />
+                <SushiCard {...SUSHI_DATA[8]} />
             </View>
         </ScrollView>
     );

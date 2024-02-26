@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
-import {View, TextInput, Button, FlatList, Text, StyleSheet, Modal, ScrollView,Pressable} from 'react-native';
+import {
+    View,
+    TextInput,
+    Button,
+    FlatList,
+    Text,
+    StyleSheet,
+    Modal,
+    ScrollView,
+    Pressable,
+    useColorScheme
+} from 'react-native';
 import {Checkbox} from 'react-native-paper';
 import {ProductCard} from "./ProductCard";
 import {data} from "@/constants/mockItemData";
@@ -7,6 +18,9 @@ import ModalWindow from "./Modal";
 import {ColorsVar} from "@/constants/ColorsVar";
 
 const SearchAndFilter = () => {
+
+    const isDark = useColorScheme() === 'dark';
+    const textStyle = { color: isDark ? '#fff' : '#000' };
     const [searchQuery, setSearchQuery] = useState('');
 
     const [filteredData, setFilteredData] = useState(data);
@@ -25,7 +39,7 @@ const SearchAndFilter = () => {
     const handleSearch = () => {
         const filtered = data.filter(item => {
             return (
-                item.name.includes(searchQuery) &&
+                item.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
                 (selectedProperties.property1 ? item.property1 : true) &&
                 (selectedProperties.property2 ? item.property2 : true) &&
                 (selectedProperties.property3 ? item.property3 : true) &&
@@ -46,7 +60,7 @@ const SearchAndFilter = () => {
         <View style={styles.container}>
             <View style={styles.searchContainer}>
                 <TextInput
-                    style={styles.input}
+                    style={[styles.input,textStyle]}
                     placeholder="Enter the text to search"
                     value={searchQuery}
                     onChangeText={(text) => setSearchQuery(text)}

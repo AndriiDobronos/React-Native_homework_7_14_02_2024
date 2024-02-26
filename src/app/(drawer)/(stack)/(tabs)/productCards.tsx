@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 
 import { ProductCard } from "@/components/ProductCard";
-import { ApartmentCard } from '@/components';
-import { Apartment, APARTMENT_DATA,Pizza,PIZZA_DATA } from '@/constants';
+import { Pizza,PIZZA_DATA } from '@/constants';
+
 const renderItem: ListRenderItem<Pizza> = ({ item }) => (
     <ProductCard mockItemData={item}/>
 );
@@ -42,8 +42,7 @@ const ProductScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-       // padding: 16,
-       // gap: 16,
+
     },
     screenTitle: {
         fontSize: 24,

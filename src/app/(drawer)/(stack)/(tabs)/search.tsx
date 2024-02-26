@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, useColorScheme } from 'react-native';
+import { View, StyleSheet, useColorScheme } from 'react-native';
 import {SearchAndFilter} from "@/components/SearchAndFilter";
 
 const SearchScreen = () => {
@@ -10,7 +10,6 @@ const SearchScreen = () => {
 
     return (
         <View style={styles.container}>
-            {/*<Text style={screenTitleStyle}>Search Screen</Text>*/}
             <SearchAndFilter  />
         </View>
     );

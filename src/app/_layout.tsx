@@ -22,14 +22,13 @@ export const unstable_settings = {
 //        -- Tabs
 //           -- Explore -> Should be the default screen
 //           -- Apartments
+//           -- ProductCards
 //           -- Profile
 //        -- Apartment Details -> Modal
 //    -- Settings
 
 export default function Layout() {
     const isDark = useColorScheme() === 'dark';
-
-    console.log("Store:",store.getState());
 
     return (
         <Provider store={store}>

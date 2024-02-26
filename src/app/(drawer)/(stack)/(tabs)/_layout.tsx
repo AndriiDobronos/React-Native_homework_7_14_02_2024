@@ -13,7 +13,7 @@ const TabsGroup = () => (
             }}
         />
         <Tabs.Screen
-            name="apartments"
+            name="sushi"
             options={{
                 headerTitle: 'Sushi menu',
                 tabBarLabel: 'Sushi menu',
