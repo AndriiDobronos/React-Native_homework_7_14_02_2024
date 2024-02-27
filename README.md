@@ -1,6 +1,7 @@
 Code from react-native
 react-navigation
 Examples with Drawer, Native Stack, Bottom Tabs and Typescript
+<<<<<<< HEAD
 
 ![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/video_2024-02-22_17-13-58.mp4)
 
@@ -15,6 +16,11 @@ Examples with Drawer, Native Stack, Bottom Tabs and Typescript
 [//]: # (![screen]&#40;https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/photo_2024-02-14_23-14-45.jpg&#41;)
 
 [//]: # (![screen]&#40;https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/photo_2024-02-14_23-15-40.jpg&#41;)
+=======
+![screen](https://github.com/AndriiDobronos/React-Native_homework_7_14_02_2024/blob/main/src/screenshots/video_2024-02-22_17-13-58.mp4)
+
+
+>>>>>>> 7df48ffd038b0a0b56aad9c1b491467f0b2cd091
 
 [//]: # (Screen.Recording.2024-01-29.at.23.27.24.mov)
 Setup project
